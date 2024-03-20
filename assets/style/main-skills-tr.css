@@ -1,0 +1,25 @@
+.projects .f-projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.projects .project-box {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    text-indent: 1.5rem;
+}
+.projects .project-box .project {
+    height: 7vh;
+    cursor: pointer;
+}
+.projects .project-box .project:hover {
+    background-color: #7194dab5;
+    color: #ffffff;
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: 0.5s;
+}

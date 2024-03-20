@@ -1,0 +1,30 @@
+@import url(./main-epr.css);
+@import url(./main-skill.css);
+
+main {
+    background: linear-gradient(135deg, #ffffff, #93d7ff, #ffddf2);
+    /* background-color: #9acded; */
+    width: 84%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 固定位置 */
+.main-bg,
+.main-content {
+    width: 92%;
+    height: 96%;
+    /* 居中显示 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-bg {
+    background: rgba(208, 245, 255, 0.402);
+    /* 毛玻璃效果 */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}

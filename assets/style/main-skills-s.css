@@ -1,0 +1,46 @@
+.softwares .f-softwares{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.softwares .software-box{
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    text-indent: 1.5rem;
+}
+.softwares .software-box .software {
+    height:7vh;
+    cursor: pointer;
+}
+.softwares .software-box .software:hover{
+    background-color: #7194dab5;
+    color: #ffffff;
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.progress{
+    height: 10px;
+    background-color: #96bdff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 1vh;
+}
+.progress .progress-bar{
+    position: absolute;
+    height: 100%;
+    background-color: #b988fa;
+    border-radius: 10px;
+    animation: progress 2s ease;
+}
+.progress-text{
+    float: right;
+    font-size: 1.2rem;
+    color: #000;
+    padding: 0 1vh;
+}

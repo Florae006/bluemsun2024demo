@@ -1,0 +1,131 @@
+/* 
+ * 侧边栏样式
+ */
+
+aside{
+    background-color: rgb(255, 255, 255);
+    box-sizing: content-box;
+    width: 16%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+}
+.top{
+    box-sizing: border-box;
+    width: 100%;
+    height: 43%;
+
+    background-color: #c4ebff;
+    text-align: center;
+    padding: 1.5vh;
+    /* 多边形 */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.avatar{
+    text-align: center;
+    margin: 0;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    flex-direction: column;
+    padding: 1.5vh;
+}
+
+.avatar .img-box{
+    margin: 10px auto;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.img-box:hover{
+    transform: scale(1.1) rotate(360deg);
+    transition: 1.5s;
+}
+
+.inner-img {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.img-box .inner-img img{
+    width: 19vh;
+    height: 19vh;
+    border: #e5f9ff 5px solid;
+    border-radius: 50%;
+    display: block;
+}
+
+@keyframes inner-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ball {
+    width: 21vh;
+    height: 21vh;
+    border-radius: 50%;
+    position: absolute;
+    /* 内部不转 */
+    animation: inner-circle 5s linear 0s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.ball .dots{
+    position: absolute;
+    top: -1vh;
+    left: calc(50% - 1vh);
+}
+
+
+/* 左下 */
+.bottom {
+    margin-left: 8px;
+}
+.contact ul,.follow ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    height: 50%;
+    padding: 1.5vh;
+}
+
+.f-title{
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    font-size: 16px;
+    width: 88%;
+    background-color: #d2c4ff;
+    cursor: pointer;
+    user-select: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.f-title:hover{
+    background-color: #d8d6fa;
+}
