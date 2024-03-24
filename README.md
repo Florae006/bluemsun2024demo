@@ -6,7 +6,7 @@
 > 将本仓库示例代码部署置github，同源地址：[Florae006/bluemsun2024demo](https://github.com/Florae006/bluemsun2024demo)
 >
 > 本仓库代码已部署至CloudFlare
-> 演示地址：[待定]
+> 演示地址：[个人简介](https://bluemsun2024demo.pages.dev/)
 
 ## 作业内容
 * 制作一个个人简介单页面(1~3周)
