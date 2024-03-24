@@ -1,25 +1,32 @@
 .projects .f-projects {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 20px;
 }
+
 .projects .project-box {
-    width: 100%;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 20px;
-    text-indent: 1.5rem;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
+
 .projects .project-box .project {
-    height: 7vh;
-    cursor: pointer;
+    background-color: rgb(196, 228, 255);
+    width: 80%;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    height: fit-content;
 }
-.projects .project-box .project:hover {
-    background-color: #7194dab5;
-    color: #ffffff;
-    border-radius: 20px;
-    transform: scale(1.05);
-    transition: 0.5s;
+
+.projects .project-box .project .btn{
+    background-color: #5776c5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
 }

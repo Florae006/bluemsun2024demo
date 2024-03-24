@@ -1,7 +1,7 @@
 .softwares .f-softwares{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .softwares .software-box{

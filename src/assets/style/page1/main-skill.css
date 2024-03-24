@@ -1,5 +1,6 @@
 @import url(./main-skills-f.css);
 @import url(./main-skills-s.css);
+@import url(./main-skills-tr.css);
 
 .three-skills {
     display: flex;
@@ -15,10 +16,7 @@
 .projects {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 0.2vw;
     width: 28%;
     height: fit-content;
     background-color: #93b8f76a;

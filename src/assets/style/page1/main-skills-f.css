@@ -1,7 +1,7 @@
 .skills .f-skills{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .skills .skill-box{
