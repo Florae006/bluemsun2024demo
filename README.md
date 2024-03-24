@@ -3,17 +3,26 @@
 > 
 > ----2024.3.24更新----
 > 
-> 将本仓库示例代码部署置github，同源地址：[Florae006/bluemsun2024demo](https://github.com/Florae006/bluemsun2024demo)
+> 将本仓库示例代码部署于github，同源地址：[Florae006/bluemsun2024demo](https://github.com/Florae006/bluemsun2024demo)
 >
 > 本仓库代码已部署至CloudFlare
-> 演示地址：[个人简介](https://bluemsun2024demo.pages.dev/)
+> 在线演示地址：[Bluemsun作业：个人简介](https://bluemsun2024demo.pages.dev/)
 
 ## 作业内容
 * 制作一个个人简介单页面(1~3周)
 * 制作一个JS小游戏(第4周)
 * 制作一个登录注册页面(5~6周)
+
+### 完成功能
+- [x] 整体布局
+- [x] 头像框跟随
+- [x] 主要模块
+- [ ] js渲染静态页面
+- [ ] 多个演示单页面设计（目前：1）
+- [ ] 另一种展示数据进度条的方法
+- [ ] js游戏演示（待开发）
 ## 本仓库作业进度
-- [ ] 部署Gitee Page
+- [x] 部署Page
 - [x] 初始骨架
 - [x] 基本布局+CSS优化
 - [ ] 《项目区》添加小游戏
