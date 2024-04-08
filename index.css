@@ -14,6 +14,9 @@ html,body{
     display: flex;
     height: 100vh;
     width: 100%;
+    flex-direction: column;
+    line-height: 2;
+    font-size: 26px;
 }
 a{
     color: #2b5900;
@@ -22,3 +25,4 @@ a{
 a:hover{
     color: #52b76b;
 }
+

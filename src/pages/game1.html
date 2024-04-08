@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/ico/icon.ico">
+  <script src="../assets/js/game1/index.js"></script>
+  <link rel="stylesheet" href="../assets/style/game1/index.css">
+  <title>🥏汉诺塔</title>
+</head>
+
+<body>
+  <!-- 汉诺塔游戏：模拟汉诺塔移动圆盘操作 -->
+  <div class="shell">
+    <div class="top">
+      <div class="back">
+        <a href="/index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>返回首页</span>
+        </a>
+      </div>
+      <div class="title">
+        <h1>汉诺塔(未完成)</h1>
+      </div>
+      <div class="game-main">
+        <!-- 内容：制作三个塔底，一共7个盘，盘的宽度均匀减少，高度相同，自下而上从大到小排列在第一个塔上，点击塔可以取下圆盘（最上面的圆盘悬浮在塔柱上方），再次点击某个塔柱可以移动到对应塔柱中(如果可以放置的话) -->
+        <div class="tower">
+          <div class="tower-1" id="tower-1"></div>
+          <div class="tower-2" id="tower-2"></div>
+          <div class="tower-3" id="tower-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="game">
+        <div class="setting">
+          <label for="num">盘符数：</label>
+          <input type="number" id="num" value="5" min="1" max="7">
+          <button id="set">设置</button>
+        </div>
+        <div class="min-step">最少步数：<span>0</span></div>
+        <div class="step">已走步数：<span id="step">0</span></div>
+        <div class="result">结果：<span id="result"></span></div>
+        <div class="btn">
+          <button id="start">开始</button>
+          <button id="reset">重置</button>
+        </div>
+      </div>
+    </div>
+</body>
+<script>
+  // 获取元素
+  let tower1 = document.getElementById('tower-1');
+  let tower2 = document.getElementById('tower-2');
+  let tower3 = document.getElementById('tower-3');
+  let num = document.getElementById('num');
+  let set = document.getElementById('set');
+  let start = document.getElementById('start');
+  let reset = document.getElementById('reset');
+  let step = document.getElementById('step');
+  let result = document.getElementById('result');
+  let minStep = document.querySelector('.min-step span');
+  // 初始化
+  let n = 5;
+  let stepCount = 0;
+  let minStepCount = 0;
+  let tower1Arr = [];
+  let tower2Arr = [];
+  let tower3Arr = [];
+  let tower1Top = 0;
+  let tower2Top = 0;
+  let tower3Top = 0;
+  let tower1TopNum = 0;
+  let tower2TopNum = 0;
+  let tower3TopNum = 0;
+  let tower1TopWidth = 0;
+  let tower2TopWidth = 0;
+  let tower3TopWidth = 0;
+</script>
+
+</html>

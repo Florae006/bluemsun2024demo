@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="../assets/style/page1/index.css">
   <!-- 引入字体图标 -->
   <script src="https://kit.fontawesome.com/b712117925.js" crossorigin="anonymous"></script>
+  <!-- 引入js -->
+  <script src="../assets/js/page1/index.js"></script>
 
   <title>简介</title>
 </head>
@@ -93,18 +95,7 @@
               <span>工作经历</span>
               <i class="fa-solid fa-gear fa-xl" style="color: #4f5776;"></i>
             </h2>
-            <ol class="timeline">
-              <li>
-                <h3>喵喵喵</h3>
-                <span>暂无喵</span>
-                <span class="time common-font-en">Time：2024.4 to Now</span>
-              </li>
-              <li>
-                <h3>喵喵喵</h3>
-                <span>暂无喵</span>
-                <span class="time common-font-en">Time：2023.6 to 2024.3</span>
-              </li>
-            </ol>
+            <ol class="timeline" id="work-timeline"></ol>
           </div>
           <div class="edu">
             <h2 class="f-edu">
@@ -139,65 +130,17 @@
               <span>技能</span>
             </h2>
 
-            <div class="skill-box">
-              <div class="skill">
-                <h4>算法<span class="progress-text">50%</span></h4>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 50%;"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <h3 class="common-font-en">HTML/CSS<span class="progress-text">90%</span></h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <h3 class="common-font-en">JavaScript<span class="progress-text">80%</span></h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 80%;"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <h3 class="common-font-en">Vue3<span class="progress-text">70%</span></h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 70%;"></div>
-                </div>
-              </div>
-            </div>
+            <div class="skill-box" id="skill-box"></div>
           </div>
+
           <!-- TODO:software做成圆形进度条 -->
           <div class="softwares">
             <h2 class="f-softwares">
               <i class="fa-solid fa-laptop fa-xl" style="color: #4f5776;"></i>
               <span>软件</span>
             </h2>
-            <div class="software-box">
-              <div class="software">
-                <h3 class="common-font-en">VS Code</h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="software">
-                <h3 class="common-font-en">Ideal</h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 30%;"></div>
-                </div>
-              </div>
-              <div class="software">
-                <h3 class="common-font-en">Pycharm</h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 70%;"></div>
-                </div>
-              </div>
-              <div class="software">
-                <h3 class="common-font-en">Typora</h3>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 60%;"></div>
-                </div>
-              </div>
-            </div>
+
+            <div class="software-box" id="software-box"></div>
           </div>
           <div class="projects">
             <h2 class="f-projects">
@@ -206,15 +149,20 @@
             </h2>
             <div class="project-box">
               <div class="project">
-                <h3>项目1</h3>
-                <div>项目描述1</div>
-                <button class="btn">点击跳转</button>
+                <h3>汉诺塔小游戏</h3>
+                <div>一个模拟汉诺塔游戏的操作，难度：⭐️⭐️⭐️⭐️</div>
+                <button class="btn" onclick="window.location.href='./game1.html'">点击跳转</button>
               </div>
               <div class="project">
-                <h3>项目2</h3>
-                <div>项目描述2</div>
-                <button class="btn">点击跳转</button>
+                <h3>猜数游戏</h3>
+                <div>一个简单的交互猜数游戏，难度：⭐️⭐️</div>
+                <button class="btn" onclick="window.location.href='./game2.html'">点击跳转</button>
               </div>
+              <!-- <div class="project">
+                <h3>轮播图</h3>
+                <div>制作简单的轮播图逻辑，难度⭐️⭐️⭐️</div>
+                <button class="btn" onclick="window.location.href='./carousel.html'">点击跳转</button>
+              </div> -->
             </div>
           </div>
         </div>

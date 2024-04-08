@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/ico/icon.ico">
+  <link rel="stylesheet" href="../assets/style/game2/index.css">
+  <title>🔢猜数游戏</title>
+</head>
+
+<body>
+  <!-- 猜数游戏：玩家输入整数数字，反馈是否猜中或者是猜对了还是猜小了，玩家可以设置猜数范围，猜数范围内至少有2个整数 -->
+  <div class="shell">
+    <div class="top">
+      <div class="back">
+        <a href="/index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>返回首页</span>
+        </a>
+      </div>
+      <div class="title">
+        <h1>猜数游戏</h1>
+      </div>
+    </div>
+    <div class="game-main">
+      <div>请设置本轮猜数的范围</div>
+      <div class="range">
+        <div>最大值：<input type="number" id="min" value="0"></div>
+        <span>~</span>
+        <div>最小值：<input type="number" id="max" value="100"></div>
+      </div>
+      <div class="mynum">请输入你猜的数字：<input type="number" id="input" placeholder="请输入数字"></div>
+      <div class="input">
+        <button id="submit">提交</button>
+        <button id="reset">重置</button>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="result">
+        <div>结果：<span id="result"></span></div>
+        <div>猜数范围：<span id="range"></span></div>
+        <div>猜数次数：<span id="times">0</span></div>
+      </div>
+    </div>
+</body>
+<script src="../assets/js/game2/index.js"></script>
+</html>

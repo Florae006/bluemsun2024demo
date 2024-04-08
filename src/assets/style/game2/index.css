@@ -1,0 +1,135 @@
+body,
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 2;
+}
+
+a{
+    text-decoration: none;
+    color: #918ff0;
+}
+
+.top {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48%;
+    text-align: center;
+    padding: 1.5vh;
+}
+
+.top .back {
+    width: 100%;
+    height: fit-content;
+    font-size: large;
+    font-weight: bold;
+    padding: 1.5vh 0;
+}
+
+
+.shell {
+    width: 60%;
+    /* 垂直水平居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2fbff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.range {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.range div {
+    margin-right: 10px;
+}
+
+.range span {
+    margin-right: 10px;
+}
+
+.range input {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.range button {
+    width: 60px;
+    height: 30px;
+    background-color: #B197FC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mynum input {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.input button {
+    font-size: 16px;
+    width: 60px;
+    height: 30px;
+    background-color: #B197FC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.input button:hover {
+    cursor: pointer;
+    background-color: #190063;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.result div {
+    margin-top: 10px;
+}
