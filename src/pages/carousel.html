@@ -1,50 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>轮播图展示</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 标题栏图标 -->
+  <link rel="icon" href="../assets/ico/icon.ico">
+  <!-- 引入字体图标 -->
+  <script src="https://kit.fontawesome.com/b712117925.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/style/carousel/index.css">
+  <title>轮播图展示</title>
 </head>
+
 <body>
-    <!-- 轮播图 -->
-    <div class="shell">
-        <div class="top">
-            <div class="back">
-                <a href="/index.html">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>返回首页</span>
-                </a>
-            </div>
-            <div class="title">
-                <h1>轮播图展示</h1>
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="carousel">
-                <div class="carousel-box">
-                    <div class="carousel-item" id="carousel-item1">
-                        <img src="../assets/img/carousel/1.jpg" alt="1">
-                    </div>
-                    <div class="carousel-item" id="carousel-item2">
-                        <img src="../assets/img/carousel/2.jpg" alt="2">
-                    </div>
-                    <div class="carousel-item" id="carousel-item3">
-                        <img src="../assets/img/carousel/3.jpg" alt="3">
-                    </div>
-                    <div class="carousel-item" id="carousel-item4">
-                        <img src="../assets/img/carousel/4.jpg" alt="4">
-                    </div>
-                    <div class="carousel-item" id="carousel-item5">
-                        <img src="../assets/img/carousel/5.jpg" alt="5">
-                    </div>
-                </div>
-                <div class="btn">
-                    <button id="prev">上一张</button>
-                    <button id="next">下一张</button>
-                </div>
-            </div>
-        </div>
+  <!-- 轮播图 -->
+  <div class="shell">
+    <div class="top">
+      <div class="back">
+        <a href="/index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>返回首页</span>
+        </a>
+      </div>
+      <div class="title">
+        <h1>轮播图展示</h1>
+      </div>
     </div>
-    
+    <div class="bottom">
+      <div class="carousel">
+        <div class="carousel-box">
+          <div class="carousel-item" id="carousel-item1">
+            <img src="../assets/img/carousel/1.jpg" alt="1">
+          </div>
+          <div class="carousel-item" id="carousel-item2">
+            <img src="../assets/img/carousel/2.jpg" alt="2">
+          </div>
+          <div class="carousel-item" id="carousel-item3">
+            <img src="../assets/img/carousel/3.jpg" alt="3">
+          </div>
+          <div class="carousel-item" id="carousel-item4">
+            <img src="../assets/img/carousel/4.jpg" alt="4">
+          </div>
+          <div class="carousel-item" id="carousel-item5">
+            <img src="../assets/img/carousel/5.jpg" alt="5">
+          </div>
+
+          <div class="dots"></div>
+        </div>
+        <div class="btn">
+          <button id="prev"><i class="fa-solid fa-arrow-right fa-rotate-180 fa-2xl" style="color: #9fa4ad;"></i></button>
+          <button id="next"><i class="fa-solid fa-arrow-right fa-2xl" style="color: #9fa4ad;"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+<script>
+  // 获取元素
+  const carousel = document.querySelector('.carousel');
+  const carouselBox = document.querySelector('.carousel-box');
+  const carouselItem = document.querySelectorAll('.carousel-item');
+  const dots = document.querySelector('.dots');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  // 生成小圆点，点击跳转图片
+  for (let i = 0; i < carouselItem.length; i++) {
+    const span = document.createElement('span');
+    span.innerText = i + 1;
+    span.className = 'dot';
+    span.onclick = function () {
+      index = i;
+      show();
+    }
+    dots.appendChild(span);
+  }
+
+  // 当前显示的图片索引
+  let index = 0;
+
+  // 上一张
+  prev.onclick = function () {
+    index--;
+    if (index < 0) {
+      index = carouselItem.length - 1;
+    }
+    show();
+  }
+
+  // 下一张
+  next.onclick = function () {
+    index++;
+    if (index > carouselItem.length - 1) {
+      index = 0;
+    }
+    show();
+  }
+
+  // 显示图片
+  function show() {
+    for (let i = 0; i < carouselItem.length; i++) {
+      carouselItem[i].style.display = 'none';
+    }
+    carouselItem[index].style.display = 'block';
+  }
+
+  // 自动播放
+  setInterval(() => {
+    index++;
+    if (index > carouselItem.length - 1) {
+      index = 0;
+    }
+    show();
+  }, 2000);
+
+  let timer = null;
+  // 鼠标移入移出
+  carousel.addEventListener('mouseover', function () {
+    clearInterval(timer);
+  });
+
+  carousel.addEventListener('mouseout', function () {
+    timer = setInterval(() => {
+      index++;
+      if (index > carouselItem.length - 1) {
+        index = 0;
+      }
+      show();
+    }, 2000);
+  });
+
+  // 
+</script>
+
 </html>

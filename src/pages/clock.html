@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 时钟 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .shell {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .top {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .back {
+            width: 100px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .back a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        .back a i {
+            margin-right: 5px;
+        }
+        .title {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom {
+            width: 100%;
+            height: calc(100vh - 50px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clock {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* 生成小圆点 */
+        .clock .clock-box .dots {
+            width: 10px;
+            height: 10px;
+            background-color: #e6a23d;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .clock-box {
+            width: 200px;
+            height: 200px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            position: relative;
+        }
+        .hour, .minute, .second {
+            width: 2px;
+            height: 100px;
+            background-color: #333;
+            position: absolute;
+            left: 50%;
+            transform-origin: 50% 100%;
+            border-radius: 5px;
+
+        }
+        .hour {
+            width: 4px;
+            background-color: #333;
+        }
+        .minute {
+            width: 3px;
+            background-color: #727ff7;
+        }
+        .second {
+            background-color: #f00;
+        }
+
+    </style>
+    <title>一个时钟</title>
+</head>
+<body>
+    <div class="shell">
+        <div class="top">
+            <div class="back">
+                <a href="/index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>返回首页</span>
+                </a>
+            </div>
+            <div class="title">
+                <h1>一个时钟</h1>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="clock">
+                <div class="clock-box">
+                    <!-- 时针 -->
+                    <div class="hour" id="hour"></div>
+                    <div class="minute" id="minute"></div>
+                    <div class="second" id="second"></div>
+                    <!-- 生成小圆点 -->
+                    <div class="dots">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 获取元素
+        let hour = document.getElementById('hour');
+        let minute = document.getElementById('minute');
+        let second = document.getElementById('second');
+        // 时钟函数
+        function clock() {
+            let date = new Date();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+            // 时针
+            hour.style.transform = `rotate(${h * 30 + m / 2}deg)`;
+            // 分针
+            minute.style.transform = `rotate(${m * 6 + s / 10}deg)`;
+            // 秒针
+            second.style.transform = `rotate(${s * 6}deg)`;
+        }
+        // 定时器
+        setInterval(clock, 1000);
+    </script>
+    
+</body>
+</html>

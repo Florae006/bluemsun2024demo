@@ -1,0 +1,138 @@
+/* 公共样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.shell {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 0 20px;
+    background-color: #f8f8f8;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+}
+
+.back a {
+    display: flex;
+    align-items: center;
+}
+
+.back a i {
+    font-size: 20px;
+}
+
+.back a span {
+    margin-left: 5px;
+}
+
+.title {
+    font-size: 20px;
+    /* 居中 */
+    flex: 1;
+    text-align: center;
+}
+
+.bottom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 轮播图样式 */
+.carousel {
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.carousel-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item:first-child {
+    display: block;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 50px;
+    height: 40px;
+    background-color: #dbdbdbc0;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #000;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dot:hover {
+    background-color: #000;
+    color: #fff;
+}
