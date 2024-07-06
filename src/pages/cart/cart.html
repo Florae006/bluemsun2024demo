@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车</title>
+  <link rel="stylesheet" href="./cart.css">
+  <script src="https://kit.fontawesome.com/b712117925.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="shell">
+    <nav>
+      <img class="nav-item" src="https://www.coca-cola.com/content/dam/onexp/cn/zh/logos/coke-header.png" alt="">
+        <div class="search-bar">
+        <input type="text" placeholder="Search" id="search-input">
+        </div>
+      <div class="nav-item">购物车</div>
+      <div class="nav-item">订单</div>
+      <div class="nav-item">我的</div>
+    </nav>
+
+    <main>
+      <div class="title-div">
+        <div class="title">当前选中<span id="cur-select"></span>样商品</div>
+        <div class="pagination" id="pagination">
+        </div>
+      </div>
+      <div class="container" id="container">
+      </div>
+    </main>
+
+    <footer>
+      <div class="sum-foot">
+        <div class="select-all" id="select-all">
+          <i class="fa-regular fa-circle-dot fa-lg"></i>
+          <!-- <i class="fa-solid fa-circle-dot fa-lg"></i> -->
+          <div>全选本页商品</div>
+        </div>
+        <div class="sum-up">
+          <div class="sum">
+            总价：<span>
+              <i class="fa-solid fa-yen-sign"></i>
+              <span id="sum">0</span>
+            </span>
+          </div>
+        <button class="pay-btn" id="pay">支付</button>
+      </div>
+  </div>
+  </footer>
+  </div>
+</body>
+<script src="./cart.js"></script>
+
+</html>
